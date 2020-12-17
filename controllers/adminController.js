@@ -14,18 +14,15 @@ class AdminController{
   }
   static addProduct(req,res){
     let newData = {
-      title: req.body.title,
-      about: req.body.about,
-      location: req.body.location,
-      meet_point: req.body.meet_point,
-      departure_date: req.body.departure_date,
-      duration: req.body.duration,
+      brand: req.body.brand,
       type: req.body.type,
-      price: req.body.price
+      description: req.body.description,
+      price: req.body.price,
+      stock: req.body.stock
     }
     Product.create(newData)
-      .then(data => res.redirect('/admins'))
-      .catch(err => res.send(err))
+      .then(data => res.redirect('/admins/products'))
+      .catch(err => res.send(err))  
   }
   static showFormEditProduct(req, res){
     let id = +req.params.id
@@ -38,14 +35,11 @@ class AdminController{
   static editProduct(req, res){
     let id = +req.params.id
     let newData = {
-      title: req.body.title,
-      about: req.body.about,
-      location: req.body.location,
-      meet_point: req.body.meet_point,
-      departure_date: req.body.departure_date,
-      duration: req.body.duration,
+      brand: req.body.brand,
       type: req.body.type,
-      price: req.body.price
+      description: req.body.description,
+      price: req.body.price,
+      stock: req.body.stock
     }
     Product.update(newData, {
       where: {id: id}

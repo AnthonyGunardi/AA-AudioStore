@@ -10,8 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      Product.hasMany(models.Transaction)
+      // // define association here
       Product.belongsToMany(models.User, {through: models.Transaction})
     }
     getDate(){

@@ -1,5 +1,4 @@
 const bcrypt = require('bcryptjs')
-const nodemailer = require('nodemailer')
 
 class Helper{
   static hashPassword(plainPassword){

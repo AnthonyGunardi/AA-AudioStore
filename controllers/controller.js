@@ -90,7 +90,13 @@ class Controller{
         ]
         return Promise.all(arrPromises)
       })
-      .then(data => res.render('checkout.ejs', {data: data[1], Helper}))
+      .then(data => {
+        // console.log(data)
+        res.render('checkout.ejs', {dataUser: data[0], dataProduct: data[1], Helper})
+        // res.send({dataUser: data[0], dataProduct: data[1]})
+
+      })
+      
       .catch(err => res.send(err))
   }
   static logout(req, res){

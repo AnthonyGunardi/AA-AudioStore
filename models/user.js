@@ -13,8 +13,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      User.hasMany(models.Transaction)
+      // // define association here
       User.belongsToMany(models.Product, {through: models.Transaction})
     }
     static sendingEmail(email){     //Static Method
