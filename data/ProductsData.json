@@ -1,0 +1,23 @@
+[
+  {
+    "brand":"Sony",
+    "type": "XBA-N3AP",
+    "description": "Neutral tonality with bass boost",
+    "price": 25e5,
+    "stock": 10
+  },
+  {
+    "brand":"iBasso",
+    "type": "IT-01S",
+    "description": "Fun & Balanced sound",
+    "price": 3e6,
+    "stock": 10
+  },
+  {
+    "brand":"Moondrop",
+    "type": "KXXX",
+    "description": "Harman-neutral tonality",
+    "price": 33e5,
+    "stock": 10
+  }
+]
