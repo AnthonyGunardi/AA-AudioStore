@@ -15,5 +15,5 @@ app.use(express.static('public'))
 app.use('/', route)
 
 app.listen(port, ()=>{
-  console.log('App is listenig on port ', port);
+  console.log('App is listening on port ', port);
 })
