@@ -2,6 +2,7 @@ const mainRouter = require('express').Router()
 const Controller = require('../controllers/controller')
 const adminRoute = require('./admin')
 
+//middleware
 const isLogIn = (req, res, next) => {
   const checkLogin = req.session.userId
   if(checkLogin) next()

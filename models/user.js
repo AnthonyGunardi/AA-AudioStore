@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasMany(models.Transaction)
+      // User.hasMany(models.Transaction)
       User.belongsToMany(models.Product, {through: models.Transaction})
     }
     static sendingEmail(email){     //Static Method
