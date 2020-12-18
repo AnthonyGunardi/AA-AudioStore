@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    afterDiscount(){
+    afterDiscount(){         //instance Method
       if(this.total_product > 1) return this.transaction_total * 0.95
       else return this.transaction_total
     }

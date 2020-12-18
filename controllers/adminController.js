@@ -21,7 +21,7 @@ class AdminController{
       stock: req.body.stock
     }
     Product.create(newData)
-      .then(data => res.redirect('/admins'))
+    .then(data => res.redirect('/admins/products'))
       .catch(err => res.send(err))
   }
   static showFormEditProduct(req, res){
